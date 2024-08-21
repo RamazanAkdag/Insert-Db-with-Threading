@@ -19,7 +19,7 @@ public class InsertThreadManager {
         invoiceRepository = new InvoiceDal();
     }
     public void saveInvoicesToDatabase(List<Invoice> invoices, ProgressBar progressBar) {
-        int numberOfThreads = 30; // Adjust as needed
+        int numberOfThreads = 30; 
         ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
         for (Invoice invoice : invoices) {
             executor.submit(() -> {
